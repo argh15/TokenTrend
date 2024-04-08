@@ -12,6 +12,9 @@
 		B91CCD762BBFFC2700DB901C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91CCD752BBFFC2700DB901C /* Assets.xcassets */; };
 		B91CCD792BBFFC2700DB901C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91CCD782BBFFC2700DB901C /* Preview Assets.xcassets */; };
 		B9E81BB12BC3A12900469622 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BB02BC3A12900469622 /* Color+Extension.swift */; };
+		B9E81BB72BC3B2B700469622 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BB62BC3B2B700469622 /* HomeView.swift */; };
+		B9E81BBA2BC3B6B700469622 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BB92BC3B6B700469622 /* CircleButtonView.swift */; };
+		B9E81BBC2BC3C11C00469622 /* CircleButtonViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BBB2BC3C11C00469622 /* CircleButtonViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		B91CCD752BBFFC2700DB901C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91CCD782BBFFC2700DB901C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9E81BB02BC3A12900469622 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B9E81BB62BC3B2B700469622 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B9E81BB92BC3B6B700469622 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		B9E81BBB2BC3C11C00469622 /* CircleButtonViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonViewAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +59,10 @@
 		B91CCD702BBFFC2500DB901C /* TokenTrend */ = {
 			isa = PBXGroup;
 			children = (
-				B9E81BAF2BC3A06F00469622 /* Extensions */,
 				B91CCD712BBFFC2500DB901C /* TokenTrendApp.swift */,
 				B91CCD732BBFFC2500DB901C /* ContentView.swift */,
+				B9E81BAF2BC3A06F00469622 /* Extensions */,
+				B9E81BB22BC3B25D00469622 /* Core */,
 				B91CCD752BBFFC2700DB901C /* Assets.xcassets */,
 				B91CCD772BBFFC2700DB901C /* Preview Content */,
 			);
@@ -76,6 +83,48 @@
 				B9E81BB02BC3A12900469622 /* Color+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9E81BB22BC3B25D00469622 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81BB82BC3B69800469622 /* Components */,
+				B9E81BB32BC3B26100469622 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B9E81BB32BC3B26100469622 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81BB52BC3B26B00469622 /* ViewModels */,
+				B9E81BB42BC3B26500469622 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B9E81BB42BC3B26500469622 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81BB62BC3B2B700469622 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9E81BB52BC3B26B00469622 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B9E81BB82BC3B69800469622 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81BB92BC3B6B700469622 /* CircleButtonView.swift */,
+				B9E81BBB2BC3C11C00469622 /* CircleButtonViewAnimation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E81BB12BC3A12900469622 /* Color+Extension.swift in Sources */,
+				B9E81BB72BC3B2B700469622 /* HomeView.swift in Sources */,
 				B91CCD742BBFFC2500DB901C /* ContentView.swift in Sources */,
+				B9E81BBC2BC3C11C00469622 /* CircleButtonViewAnimation.swift in Sources */,
+				B9E81BBA2BC3B6B700469622 /* CircleButtonView.swift in Sources */,
 				B91CCD722BBFFC2500DB901C /* TokenTrendApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +343,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,6 +377,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
