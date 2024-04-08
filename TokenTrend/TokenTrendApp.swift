@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct TokenTrendApp: App {
+    
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, visionOS 1, *) {
@@ -24,5 +27,6 @@ struct TokenTrendApp: App {
                 }
             }
         }
+        .environmentObject(vm)
     }
 }

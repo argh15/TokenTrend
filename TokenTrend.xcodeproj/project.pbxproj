@@ -20,6 +20,8 @@
 		B9E81BC52BC3D13700469622 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BC42BC3D13700469622 /* PreviewProvider+Extension.swift */; };
 		B9E81BC72BC3D4A900469622 /* BTCCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BC62BC3D4A900469622 /* BTCCoin.swift */; };
 		B9E81BCA2BC3DD8200469622 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BC92BC3DD8200469622 /* Double+Extension.swift */; };
+		B9E81BCC2BC3E96F00469622 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BCB2BC3E96F00469622 /* HomeViewModel.swift */; };
+		B9E81BCF2BC3EF0500469622 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E81BCE2BC3EF0500469622 /* CoinDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		B9E81BC42BC3D13700469622 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 		B9E81BC62BC3D4A900469622 /* BTCCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCCoin.swift; sourceTree = "<group>"; };
 		B9E81BC92BC3DD8200469622 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		B9E81BCB2BC3E96F00469622 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B9E81BCE2BC3EF0500469622 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +73,11 @@
 		B91CCD702BBFFC2500DB901C /* TokenTrend */ = {
 			isa = PBXGroup;
 			children = (
-				B9E81BC82BC3D58700469622 /* Mocks */,
-				B9E81BBF2BC3C71600469622 /* Models */,
 				B91CCD712BBFFC2500DB901C /* TokenTrendApp.swift */,
 				B91CCD732BBFFC2500DB901C /* ContentView.swift */,
+				B9E81BC82BC3D58700469622 /* Mocks */,
+				B9E81BBF2BC3C71600469622 /* Models */,
+				B9E81BCD2BC3EEF300469622 /* Services */,
 				B9E81BAF2BC3A06F00469622 /* Extensions */,
 				B9E81BB22BC3B25D00469622 /* Core */,
 				B91CCD752BBFFC2700DB901C /* Assets.xcassets */,
@@ -129,6 +134,7 @@
 		B9E81BB52BC3B26B00469622 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B9E81BCB2BC3E96F00469622 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -156,6 +162,14 @@
 				B9E81BC62BC3D4A900469622 /* BTCCoin.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B9E81BCD2BC3EEF300469622 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81BCE2BC3EF0500469622 /* CoinDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +247,10 @@
 				B9E81BB12BC3A12900469622 /* Color+Extension.swift in Sources */,
 				B9E81BB72BC3B2B700469622 /* HomeView.swift in Sources */,
 				B91CCD742BBFFC2500DB901C /* ContentView.swift in Sources */,
+				B9E81BCF2BC3EF0500469622 /* CoinDataService.swift in Sources */,
 				B9E81BCA2BC3DD8200469622 /* Double+Extension.swift in Sources */,
 				B9E81BC52BC3D13700469622 /* PreviewProvider+Extension.swift in Sources */,
+				B9E81BCC2BC3E96F00469622 /* HomeViewModel.swift in Sources */,
 				B9E81BBC2BC3C11C00469622 /* CircleButtonViewAnimation.swift in Sources */,
 				B9E81BBA2BC3B6B700469622 /* CircleButtonView.swift in Sources */,
 				B91CCD722BBFFC2500DB901C /* TokenTrendApp.swift in Sources */,
