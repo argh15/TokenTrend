@@ -11,12 +11,17 @@ struct HomeView: View {
     
     @EnvironmentObject var vm: HomeViewModel
     @State private var showPortfolio: Bool = false
+    @State private var showAddEditPortfolioView: Bool = false
     
     var body: some View {
         ZStack {
             // background layer
-            Color.theme.background
+            Color.theme.appBackground
                 .ignoresSafeArea()
+                .sheet(isPresented: $showAddEditPortfolioView, content: {
+                    AddEditPortfolioView()
+                        .environmentObject(vm)
+                })
             
             // content layer
             VStack {
@@ -54,6 +59,11 @@ extension HomeView {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
             // using UUID because that value won't change
                 .animation(.none, value: UUID())
+                .onTapGesture {
+                    if showPortfolio {
+                        showAddEditPortfolioView.toggle()
+                    }
+                }
                 .background(
                     CircleButtonViewAnimation(animate: $showPortfolio))
             Spacer()

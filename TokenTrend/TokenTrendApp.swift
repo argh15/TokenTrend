@@ -12,6 +12,11 @@ struct TokenTrendApp: App {
     
     @StateObject private var vm = HomeViewModel()
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(.accent)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.accent)]
+    }
+    
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16, macOS 13, tvOS 16, watchOS 9, visionOS 1, *) {
