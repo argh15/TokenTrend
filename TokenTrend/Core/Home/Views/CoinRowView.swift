@@ -27,9 +27,7 @@ struct CoinRowView: View {
 }
 
 #Preview ("Coin") {
-    Group {
-        CoinRowView(coin: BTCCoin.instance.coin, showHoldingsColumn: true)
-    }
+    CoinRowView(coin: BTCCoin.instance.coin, showHoldingsColumn: true)
 }
 
 extension CoinRowView {
@@ -40,7 +38,7 @@ extension CoinRowView {
                 .font(.caption)
                 .foregroundStyle(.appSecondaryText)
                 .frame(minWidth: 30)
-            Circle()
+            CoinImageView(coin: coin)
                 .frame(width: 30, height: 30)
             Text(coin.symbol.uppercased())
                 .font(.headline)
