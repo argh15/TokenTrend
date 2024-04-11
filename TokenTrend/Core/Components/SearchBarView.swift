@@ -15,9 +15,9 @@ struct SearchBarView: View {
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundStyle(
-                    searchText.isEmpty ? Color.theme.secondaryText : Color.theme.accent)
+                    searchText.isEmpty ? .appSecondaryText : .accent)
             TextField("Search by name or symbol", text: $searchText)
-                .foregroundStyle(Color.theme.accent)
+                .foregroundStyle(.accent)
                 .autocorrectionDisabled()
                 .keyboardType(.asciiCapable)
                 .overlay(
@@ -28,7 +28,7 @@ struct SearchBarView: View {
                             UIApplication.shared.endEditing()
                             searchText = ""
                         }
-                        .foregroundStyle(Color.theme.accent)
+                        .foregroundStyle(.accent)
                         .opacity(searchText.isEmpty ? 0.0 : 1.0)
                     ,
                     alignment: .trailing)
@@ -37,8 +37,8 @@ struct SearchBarView: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 25.0)
-                .fill(Color.theme.background)
-                .shadow(color: Color.theme.accent.opacity(0.15), radius: 10))
+                .fill(.appBackground)
+                .shadow(color: .accent.opacity(0.15), radius: 10))
         .padding()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  BTCCoin.swift
+//  MockCoin.swift
 //  TokenTrend
 //
 //  Created by Arghadeep Chakraborty on 4/8/24.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class BTCCoin {
+class MockCoin {
     
-    static let instance = BTCCoin()
+    static let instance = MockCoin()
     
     private init() { }
     

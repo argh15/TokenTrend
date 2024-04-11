@@ -32,5 +32,5 @@ struct CoinImageView: View {
 }
 
 #Preview {
-    CoinImageView(coin: BTCCoin.instance.coin)
+    CoinImageView(coin: MockCoin.instance.coin)
 }

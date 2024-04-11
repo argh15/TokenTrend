@@ -27,7 +27,7 @@ struct CoinRowView: View {
 }
 
 #Preview ("Coin") {
-    CoinRowView(coin: BTCCoin.instance.coin, showHoldingsColumn: true)
+    CoinRowView(coin: MockCoin.instance.coin, showHoldingsColumn: true)
 }
 
 extension CoinRowView {
