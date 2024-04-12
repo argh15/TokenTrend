@@ -35,6 +35,11 @@ struct AddEditPortfolioView: View {
                     trailingNavBarButton
                 }
             }
+            .onChange(of: vm.searchText) { _, newValue in
+                if newValue == "" {
+                    unselectCoin()
+                }
+            }
         }
     }
 }
@@ -49,13 +54,13 @@ extension AddEditPortfolioView {
     private var coinChipList: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             LazyHStack(spacing: 10) {
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     CoinChipView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -120,13 +125,18 @@ extension AddEditPortfolioView {
     }
     
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard 
+            let coin = selectedCoin,
+            let amount = Double(quantityText)
+        else { return }
         
         // save to portfolio
+        vm.updatePorfolio(coin: coin, amount: amount)
         
         // show checkmark
         withAnimation(.easeIn) {
             showCheckMark = true
+            unselectCoin()
         }
         
         // hide keyboard
@@ -143,5 +153,15 @@ extension AddEditPortfolioView {
     private func unselectCoin() {
         selectedCoin = nil
         vm.searchText = ""
+    }
+    
+    private func updateSelectedCoin(coin: Coin) {
+        selectedCoin = coin
+        
+        if let portfolioCoin = vm.portfolioCoins.first(where: { $0.id == coin.id }), let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
     }
 }

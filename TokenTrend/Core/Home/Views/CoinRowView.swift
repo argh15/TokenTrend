@@ -23,6 +23,12 @@ struct CoinRowView: View {
             
         }
         .font(.subheadline)
+        // hack to make the whole row clickable
+        // as of now since we have a spacer in the middle
+        // the middle part of the row is NOT clickable
+        .background(
+            Color.theme.appBackground
+        )
     }
 }
 

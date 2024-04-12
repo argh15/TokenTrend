@@ -12,7 +12,9 @@ import Foundation
  URL: https://api.coingecko.com/api/v3/global
  
  JSON Response:
- "data": {
+ 
+ {
+     "data": {
          "active_cryptocurrencies": 13802,
          "upcoming_icos": 0,
          "ongoing_icos": 49,
@@ -161,6 +163,8 @@ import Foundation
          "market_cap_change_percentage_24h_usd": 1.76018141402385,
          "updated_at": 1712814412
      }
+ }
+ 
  */
 
 
@@ -195,5 +199,3 @@ struct MarketData: Codable {
         return ""
     }
 }
-
-

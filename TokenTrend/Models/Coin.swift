@@ -12,6 +12,8 @@ import Foundation
  URL: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h
  
  JSON Response:
+ 
+ {
      "id": "leo-token",
      "symbol": "leo",
      "name": "LEO Token",
@@ -39,12 +41,14 @@ import Foundation
      "roi": null,
      "last_updated": "2024-04-08T06:42:38.453Z",
      "sparkline_in_7d": {
-        "price": [
-            6.051507563968339,
-            6.0718675364723955
-        ]
+         "price": [
+             6.051507563968339,
+             6.0718675364723955
+         ]
      },
      "price_change_percentage_24h_in_currency": 0.17446231430199788
+ }
+ 
  */
 
 // MARK: - Coin
@@ -84,4 +88,3 @@ struct Coin: Identifiable, Codable {
 struct SparklineIn7D: Codable {
     let price: [Double]?
 }
-
