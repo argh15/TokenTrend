@@ -26,7 +26,12 @@ struct AddEditPortfolioView: View {
                     }
                 }
             }
+            .background(
+                Color.colorTheme.appBackground
+                    .ignoresSafeArea()
+            )
             .navigationTitle("Add / Edit Portfolio")
+            .toolbarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     XMarkButtonView()

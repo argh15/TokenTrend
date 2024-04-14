@@ -15,7 +15,7 @@ struct HomeStatisticsView: View {
     var body: some View {
             HStack {
                 ForEach(vm.statistics) { stat in
-                    StatisticView(stat: stat)
+                    StatisticView(stat: stat, alignment: .center)
                     // this way is not recommended
                     // have to change the methodology
                     // reason to use 3.1 and not 3 -

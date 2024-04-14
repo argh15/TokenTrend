@@ -27,7 +27,7 @@ struct CoinRowView: View {
         // as of now since we have a spacer in the middle
         // the middle part of the row is NOT clickable
         .background(
-            Color.theme.appBackground
+            Color.colorTheme.appBackground
         )
     }
 }

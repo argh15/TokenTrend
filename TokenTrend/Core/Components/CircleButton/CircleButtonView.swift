@@ -17,7 +17,7 @@ struct CircleButtonView: View {
             .frame(width: 50, height: 50)
             .background(
                 Circle()
-                    .foregroundStyle(.background))
+                    .foregroundStyle(.appBackground))
             .shadow(
                 color: .accent.opacity(0.25), radius: 10)
             .padding()

@@ -10,7 +10,7 @@ import Combine
 
 class CoinDetailDataService {
     
-    @Published var coinDetails: CoinDetail? = nil
+    @Published var coinDetails: CoinDetail?
     
     private var coinDetailSubscription: AnyCancellable?
     private let coin: Coin
@@ -29,6 +29,7 @@ class CoinDetailDataService {
         
         coinDetailSubscription = NetworkingManager.download(url: url)
             .decode(type: CoinDetail.self, decoder: decoder)
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (coinDetails) in
                 self?.coinDetails = coinDetails
                 self?.coinDetailSubscription?.cancel()

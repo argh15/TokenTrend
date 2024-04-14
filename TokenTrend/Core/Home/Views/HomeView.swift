@@ -12,13 +12,14 @@ struct HomeView: View {
     @EnvironmentObject var vm: HomeViewModel
     @State private var showPortfolio: Bool = false
     @State private var showAddEditPortfolioView: Bool = false
+    @State private var showSettingsView: Bool = false
     @State private var selectedCoin: Coin? = nil
     @State private var showDetailView: Bool = false
     
     var body: some View {
         ZStack {
             // background layer
-            Color.theme.appBackground
+            Color.colorTheme.appBackground
                 .ignoresSafeArea()
                 .sheet(isPresented: $showAddEditPortfolioView, content: {
                     AddEditPortfolioView()
@@ -39,11 +40,20 @@ struct HomeView: View {
                     allCoinsList
                         .transition(.move(edge: .leading))
                 } else {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            emptyPortfolioView
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showSettingsView, content: {
+                SettingsView()
+            })
         }
         .navigationDestination(isPresented: $showDetailView, destination: {
             DetailLoadingView(coin: $selectedCoin)
@@ -67,6 +77,8 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showAddEditPortfolioView.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
                 .background(
@@ -99,8 +111,17 @@ extension HomeView {
                         segueToDetailsView(coin: coin)
                     }
             }
+            .listRowBackground(Color.colorTheme.appBackground)
         }
         .listStyle(.plain)
+    }
+    
+    private var emptyPortfolioView: some View {
+        Text("Your Portfolio currently doesn't have any coins. Please click on the \"+\" icon to get started!")
+            .font(.headline)
+            .fontWeight(.medium)
+            .padding(50)
+            .multilineTextAlignment(.center)
     }
     
     private var portfolioCoinsList: some View {
@@ -112,6 +133,7 @@ extension HomeView {
                         segueToDetailsView(coin: coin)
                     }
             }
+            .listRowBackground(Color.colorTheme.appBackground)
         }
         .listStyle(.plain)
     }

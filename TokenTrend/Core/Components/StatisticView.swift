@@ -10,9 +10,10 @@ import SwiftUI
 struct StatisticView: View {
     
     let stat: Statistic
+    let alignment: HorizontalAlignment
     
     var body: some View {
-        VStack {
+        VStack(alignment: alignment) {
             Text(stat.title)
                 .font(.caption)
                 .foregroundStyle(.appSecondaryText)
@@ -36,11 +37,11 @@ struct StatisticView: View {
 #Preview {
     Group {
         Spacer()
-        StatisticView(stat: MockStatistic.instance.stat1)
+        StatisticView(stat: MockStatistic.instance.stat1, alignment: .leading)
         Spacer()
-        StatisticView(stat: MockStatistic.instance.stat2)
+        StatisticView(stat: MockStatistic.instance.stat2, alignment: .center)
         Spacer()
-        StatisticView(stat: MockStatistic.instance.stat3)
+        StatisticView(stat: MockStatistic.instance.stat3, alignment: .trailing)
         Spacer()
     }
 }
