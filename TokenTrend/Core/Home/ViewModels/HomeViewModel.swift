@@ -135,7 +135,7 @@ class HomeViewModel: ObservableObject {
         
         let currentValue = getPortfolioCurrentValue(portfolioCoins: portfolioCoins)
         let value24HoursBack = getPortfolio24HPreviousValue(portfolioCoins: portfolioCoins)
-        var percentChange = ((currentValue - value24HoursBack) / value24HoursBack) * 100
+        var percentChange = ((currentValue - value24HoursBack) / value24HoursBack)
         if percentChange.isNaN {
             percentChange = 0.0
         }

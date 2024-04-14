@@ -23,10 +23,11 @@ class NetworkingManager {
     }
     
     static func download(url: URL) -> AnyPublisher<Data, Error> {
+        // dataTaskPublisher is always on background thread
         return URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: DispatchQueue.global(qos: .default))
             .tryMap({ try handleResponse(output: $0, url: url)})
-            .receive(on: DispatchQueue.main)
+            // adding this to just be sure if the server is not down
+            .retry(2)
             .eraseToAnyPublisher()
     }
     
