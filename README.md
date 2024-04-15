@@ -3,7 +3,7 @@
 <p id="description">This cryptocurrency tracking app iOS application (only iPhones) uses MVVM Architecture Combine and CoreData. This app aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading animations, publishers/subscribers, and data persistence and supports dark mode.\nIt was a lot of fun exploring these concepts. I'll be rolling out a new version of this app soon.</p>
 
 <h2>🚀 Demo</h2>
-https://drive.google.com/file/d/1CcPEBt-K4OZ0H7k4seb2PoHPk2gD6vWu/view?usp=sharing](https://drive.google.com/file/d/1CcPEBt-K4OZ0H7k4seb2PoHPk2gD6vWu/view?usp=sharing)
+<a href=https://drive.google.com/file/d/1vp04V0Kot0xvxIw-OATvLRUL4Bwb3oTL/view?usp=drive_link>Link to demo </a>
 
 <h2>Project Screenshots: (Dark Theme)</h2>
 <h6>Loading</h6>
