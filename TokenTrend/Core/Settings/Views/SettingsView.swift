@@ -108,7 +108,7 @@ extension SettingsView {
                     .scaledToFit()
                     .frame(height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                Text("This app was developed by Arghadeep (Argh). This apps aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading, animations, publishers/subscribers, and data persistence.\nIt was a lot of fun exploring these concepts. I'll be soon rolling out a new version of this app.")
+                Text("This app was developed by Arghadeep (Argh). This app aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading, animations, publishers/subscribers, and data persistence.\nIt was a lot of fun exploring these concepts. I'll be soon rolling out a new version of this app.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundStyle(.accent)
