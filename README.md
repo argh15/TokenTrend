@@ -1,6 +1,8 @@
 <h1 align="center" id="title">Token Trend</h1>
 
-<p id="description">This cryptocurrency tracking app iOS application (only iPhones) uses MVVM Architecture Combine and CoreData. This app aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading animations, publishers/subscribers, and data persistence and supports dark mode.\nIt was a lot of fun exploring these concepts. I'll be rolling out a new version of this app soon.</p>
+<p id="description">This cryptocurrency tracking app iOS application (only iPhones) uses MVVM Architecture Combine and CoreData. This app aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading animations, publishers/subscribers, and data persistence and supports dark mode.</p>
+
+<p id="description">It was a lot of fun exploring these concepts. I'll be rolling out a new version of this app soon.</p>
 
 <h2>Installation Steps:</h2>
 
